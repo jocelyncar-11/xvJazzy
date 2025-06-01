@@ -1,0 +1,57 @@
+
+    h1 {
+      font-family: 'Parisienne', cursive;
+      color: #c7a67a; /* Color dorado elegante */
+    }
+  .fecha-container {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    margin: 40px;
+  }
+
+  .fecha-container .dia {
+    letter-spacing: 6px;
+    font-size: 22px; /* Aumentado */
+    display: inline-block;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    padding: 8px 20px;
+  }
+
+  .fecha-container .año {
+    letter-spacing: 6px;
+    font-size: 22px; /* Aumentado */
+    display: inline-block;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    padding: 8px 20px;
+    position: relative;
+  }
+
+  .fecha-container .año::after {
+    content: '●';
+    position: absolute;
+    right: -25px;
+    top: 0;
+    font-size: 24px; /* Aumentado */
+  }
+
+  .fecha-container .mes {
+    font-size: 24px; /* Aumentado */
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+    color: #6b4f3b;
+  }
+
+  .fecha-container .numero {
+    font-size: 90px; /* Aumentado */
+    color: #c6ab87;
+    font-weight: 300;
+    margin: 0 30px;
+  }
+
+  .fecha-linea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JazzyXv</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="stilos.css">
+
+</head>
+<body>
+    <!-- Barra de Navegación -->
+ <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e2d8cc;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Mis XV años</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Organización</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Itinerario
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Actividades</a></li>
+            <li><a class="dropdown-item" href="#">Ubicación</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Mapa del lugar</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Información Adicional</a>
+        </li>
+      </ul>
+
+      <!-- Formulario de búsqueda -->
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<br>
+<br>
+<!--Bienvenida-->
+ <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+ <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="display-1">Bienvenido a mis XV años</h1>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+<!--carrusel-->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="IMG/BANNER 1.png" class="d-block w-83" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<script>
+ // Fecha del evento (27 de junio de 2025 a las 17:00)
+  const eventDate = new Date("2025-06-27T17:00:00").getTime();
+
+  const countdown = () => {
+    const now = new Date().getTime();
+    const timeLeft = eventDate - now;
+
+    if (timeLeft > 0) {
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days.toString().padStart(2, "0");
+      document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+    }
+  };
+
+  setInterval(countdown, 1000);
+</script>
+<!-- Cuenta Regresiva  -->
+<section class="text-center my-5" style="font-family: 'Parisienne', cursive; background-color: #fdf9f7; padding: 40px 20px;">
+  <h2 style="font-size: 4em; color: #a67c52; margin-bottom: 15px;">¡Faltan solo...</h2>
+  <div id="countdown" style="display: flex; justify-content: center; gap: 30px; font-family: 'Georgia', serif; font-size: 1.5em; color: #5e3c2c;">
+    <div>
+      <div id="days" style="font-size: 2em; font-weight: bold;">00</div>
+      <div>Días</div>
+    </div>
+    <div>
+      <div id="hours" style="font-size: 2em; font-weight: bold;">00</div>
+      <div>Horas</div>
+    </div>
+    <div>
+      <div id="minutes" style="font-size: 2em; font-weight: bold;">00</div>
+      <div>Minutos</div>
+    </div>
+    <div>
+      <div id="seconds" style="font-size: 2em; font-weight: bold;">00</div>
+      <div>Segundos</div>
+    </div>
+  </div>
+  <p class="mt-4" style="font-size: 2.7em; color: #6e4e3a;">para celebrar juntos mis XV años</p>
+</section>
+
+<br>
+<br>
+
+<!-- Script del widget -->
+<script src="https://cdn.logwork.com/widget/countdown.js"></script>
+
+
+<script src ="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.logwork.com/widget/countdown.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f5f0ee;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-style: italic;
+      font-size: 2.5em;
+      margin-bottom: 50px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+      border-left: 3px solid #000;
+      padding-left: 30px;
+    }
+
+    .event {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .event i {
+      font-size: 30px;
+      width: 40px;
+      margin-right: 20px;
+      color: #555;
+    }
+
+    .event-text {
+      line-height: 1.5;
+    }
+
+    .event-text h3 {
+      margin: 0;
+      font-size: 1.2em;
+      color: #000;
+    }
+
+    .event-text p {
+      margin: 0;
+      color: #c06a6a;
+      font-weight: bold;
+    }
+  </style>
+ <style>
+    body {
+      font-family: 'Georgia', serif;
+    }
+
+    .btn-color {
+      background-color: #3a3028;
+      color: white;
+      border: none;
+      font-size: 1.4rem;
+      padding: 0.6rem 1.5rem;
+      margin: 0 30px;
+      font-family:  'Georgia', serif;
+      text-transform: uppercase; 
+      min-height: 60px;           
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-color:hover {
+      background-color: #3a3028;
+    }
+
+    .card-personalizada {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 2.5s ease, transform 2.5s ease;
+      display: none;
+      max-width: 500px;
+      background-color: #e2d8cc;
+    }
+
+    .card-personalizada.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-personalizada.hide {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    ul.card-text li::before {
+      content: "◆ ";
+      color:#3a3028;
+      margin-right: 5px;
+    }
+  </style>
+<!--itinerario-->
+<h1>Itinerario</h1>
+<div class="timeline">
+ 
+  <div class="event">
+    <i class="fas fa-cocktail"></i>
+    <div class="event-text">
+      <h3>RECEPCIÓN</h3>
+      <p>6:00 P.M.</p>
+    </div>
+  </div>
+   <div class="event">
+    <i class="fas fa-church"></i>
+    <div class="event-text">
+      <h3>CEREMONIA</h3>
+      <p>6:30 P.M.</p>
+    </div>
+  </div>
+  <div class="event">
+    <i class="fas fa-utensils"></i>
+    <div class="event-text">
+      <h3>Banquete</h3>
+      <p>7:30 P.M.</p>
+    </div>
+  </div>
+  <div class="event">
+    <i class="fas fa-person-dress"></i>
+    <div class="event-text">
+      <h3>Vals</h3>
+      <p>9:30 P.M.</p>
+    </div>
+  </div>
+  <div class="event">
+    <i class="fas fa-music"></i>
+    <div class="event-text">
+      <h3>FIESTA</h3>
+      <p>11:30 P.M.</p>
+    </div>
+  </div>
+</div>
+
+  <style>
+    body {
+      font-family: Antic Didone,Cloud Loop;
+      background-color: #f9f5f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background-color: #C6AB87;
+      color: white;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .container h2 {
+      font-size: px;
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+    .container h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .container p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #E2D8CC;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      font-size: 14px;
+    }
+    .btn:hover {
+      background-color: #3a3028;
+    }
+  </style>
+  <div class="container">
+    <h2>Ubicación</h2>
+    <h3>La Quinta de Don Jose </h3>
+    <p>Embarcadero, col.villa Xochitenco,<br>Chimalhucán, MÉX. C.P. 56334</p>
+    <a class="btn" href="https://maps.app.goo.gl/CRtkHRVBdGhxwnyy7?g_st=aw" target="_blank">VER UBICACIÓN</a>
+  </div>
+  <br>
+<style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fdf9f7;
+      text-align: center;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-family: Cloud Loop;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: normal;
+      font-family:Parisienne;
+      color: #a67c52;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .gift-option {
+      margin-bottom: 30px;
+    }
+
+    .gift-option img {
+      max-height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .gift-option .event-number {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 30px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: white;
+      text-decoration: none;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+
+  <h1>SUGERENCIA DE</h1>
+  <h2>Regalos</h2>
+
+  <p>TÚ presencia es el regalo más valioso, pero si deseas dejarme un obsequio,la mesa de regalos se encuentra aquí. Gracias por acompañarme en este día tan especial:</p>
+
+  <div class="gift-option">
+    <img src="IMG/Liverpool_logo.svg.png" alt="Liverpool" height="40">
+    <div class="event-number">No. Evento: 51682746</div>
+    <a href="https://www.liverpool.com.mx" class="btn" target="_blank">VER AQUÍ</a>
+  </div>
+
+  <div class="gift-option">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" height="40">
+    <br>
+    <a href="https://www.amazon.com.mx/registries/gl/guest-view/289KU5HPG2MB2" class="btn" target="_blank">VER AQUÍ</a>
+  </div>
+  
+<br>
+<br>
+<!-- Confirmación de asistencia -->
+<section style="position: relative; text-align: center; color: #200202; font-family: 'Georgia', serif; margin: 40px 0;">
+  <div style="position: relative; width: 90%; max-width: 900px; margin: auto;">
+    <img src="IMG/Imagen de WhatsApp 2025-05-26 a las 13.41.55_f24127ff.jpg" alt="Fondo"
+         style="width: 80%; height: auto; max-height: 660px; border-radius: 14px; opacity: 0.6; display: block; margin: auto;">
+    
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                width: 90%; padding: 20px;">
+      <h2 style="font-family: 'Parisienne', cursive; font-size: 3.2em; color: #200202;">Confirma tu asistencia</h2>
+      <p style="font-size: 1.5em;">Agradecemos su confirmación de asistencia antes del:</p>
+      <p style="font-size: 1.7em;"><strong>27 de Junio del 2025</strong></p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd43yOXvY5QIECXDjg0NgzotuJGLf-dcteOl_zbBH4DPsMJ5w/viewform?usp=header"
+         class="btn btn-outline-dark mt-3"
+         target="_blank" rel="noopener noreferrer">CONFIRMAR AQUÍ</a>
+      <p class="mt-4" style="font-size: 1.6em;">¡TE ESPERAMOS!</p>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+
+
+  <!--Footer-->
+<footer class="text-black text-center py-4" style="background-color: #e2d8cc;">
+    <div class="container">
+        <p class="mb-2">Gracias por ser parte de este momento</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://www.instagram.com/jaazzy2003?igsh=aTVkMTZoa2h6MW1v" target="_blank" class="text-white  fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1Z9Lp1ZX23/" target="_blank" class="text-white  fs-4"><i class="bi bi-facebook"></i></a>
+        </div>
+        <p class="mb-2">¡Esperamos contar con tu presencia!</p>
+    </div>
+</footer>
+
+    <script src="JS/bootstrap.bundle.js"></script>
+
+</body>
+</html>
